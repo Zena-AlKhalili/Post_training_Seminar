@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: Update the title and description when the seminar details are final. -->
+  <title>Selected Topics in LLM Post-training</title>
+  <meta name="description" content="Selected Topics in LLM Post-training: a research seminar on instruction following, reasoning, and alignment with human intent. Instructors, readings, presentation schedule, and participant instructions.">
+  <meta name="theme-color" content="#172c47">
+  <script type="text/javascript" nonce="76681a858d134421ad5436bee75" src="//local.adguard.org?ts=1789129462742&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000cb988210854ad7f4282af452%26fn%3Dselected-topics-llm-post-training.html%26cd%3Dattachment%26ts%3D496981%26p%3Dfs%26cid%3D1%26sig%3D05e241d809567b348a4f16bb457a5a64f242717b32590c59d8f3fb90006aa99d%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-dnt"></script><script type="text/javascript" nonce="76681a858d134421ad5436bee75" src="//local.adguard.org?ts=1789129462742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23172c47'/%3E%3Cpath d='M7 8h7c2 0 2 2 2 2s0-2 2-2h7v16h-7c-2 0-2 2-2 2s0-2-2-2H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M16 10v14' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172c47;
+      --text: #2f3946;
+      --muted: #596576;
+      --accent: #185e83;
+      --line: #dbe1e8;
+      --soft: #f4f7fa;
+      --page: #fff;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-padding-top: 1.5rem; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-underline-offset: .2em; text-decoration-thickness: 1px; }
+    a:hover { color: var(--ink); text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+    .skip-link { position: absolute; left: 1rem; top: -10rem; padding: .65rem 1rem; background: white; z-index: 10; }
+    .skip-link:focus { top: .5rem; }
+    .page { width: min(100% - 3rem, 68rem); margin-inline: auto; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+    .wordmark { font-size: .875rem; font-weight: 700; color: var(--ink); letter-spacing: .035em; }
+    nav { display: flex; gap: .5rem 1.5rem; flex-wrap: wrap; }
+    nav a { font-size: .875rem; color: var(--muted); text-decoration: none; padding-block: .35rem; }
+    nav a:hover { text-decoration: underline; }
+    .intro { padding-block: 4.25rem 3.5rem; }
+    .eyebrow { margin: 0 0 1rem; color: var(--accent); font-size: .875rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    h1, h2, h3 { color: var(--ink); }
+    h1 { margin: 0; max-width: 52rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.4rem, 5.6vw, 4rem); font-weight: 400; line-height: 1.15; letter-spacing: -.03em; }
+    .subtitle { margin: 1.15rem 0 0; font-size: 1.125rem; color: var(--muted); max-width: 42rem; }
+    .details { display: flex; flex-wrap: wrap; gap: .75rem 2.5rem; margin: 2rem 0 0; padding: 0; }
+    .details div { display: flex; flex-wrap: wrap; column-gap: .55rem; }
+    .details dt { font-weight: 600; color: var(--ink); }
+    .details dd { margin: 0; color: var(--muted); }
+    .section { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 2.25rem; padding-block: 2.5rem; border-top: 1px solid var(--line); }
+    .section-heading h2 { margin: 0; font-size: 1.125rem; font-weight: 650; line-height: 1.4; }
+    .section-number { display: block; color: var(--muted); font-size: .875rem; margin-bottom: .4rem; }
+    .section-body > :first-child { margin-top: 0; }
+    .section-body > :last-child { margin-bottom: 0; }
+    p { margin: 0 0 1rem; }
+    .muted { color: var(--muted); }
+    .instructors { display: grid; gap: 1.75rem; }
+    .instructor { display: grid; grid-template-columns: 5rem minmax(0, 1fr); align-items: start; gap: 1.25rem; }
+    .instructor-photo { width: 5rem; height: 5rem; display: grid; place-items: center; overflow: hidden; border-radius: 50%; background: var(--soft); color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.5rem; }
+    .instructor-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .instructor h3 { font-size: 1.125rem; font-weight: 600; margin: 0 0 .3rem; overflow-wrap: anywhere; }
+    .instructor p { margin: 0; color: var(--muted); }
+    .schedule-section { display: block; }
+    .schedule-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 1.5rem; }
+    .schedule-header p { margin: 0; font-size: .875rem; color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    caption { text-align: left; color: var(--muted); font-size: .875rem; padding-bottom: 1rem; }
+    th, td { padding: 1.15rem 1rem; vertical-align: top; border-bottom: 1px solid var(--line); }
+    thead th { background: var(--soft); font-size: .875rem; font-weight: 600; color: var(--ink); padding-block: .75rem; }
+    thead th:first-child { width: 4.5rem; }
+    thead th:nth-child(2) { width: 8rem; }
+    thead th:last-child { width: 11rem; }
+    tbody th { font-size: .875rem; font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .paper { display: block; font-weight: 600; line-height: 1.5; }
+    .paper + .paper { margin-top: .7rem; }
+    .topic { display: block; margin-top: .35rem; font-size: .875rem; color: var(--muted); }
+    .pending { color: var(--muted); font-size: .875rem; }
+    .guidance-note { color: var(--muted); font-size: .875rem; }
+    .guidelines { margin: 1.25rem 0 0; padding-left: 1.2rem; }
+    .guidelines li { padding-left: .35rem; margin-bottom: 1rem; }
+    .guidelines li:last-child { margin-bottom: 0; }
+    .guidelines strong { color: var(--ink); font-weight: 600; }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.5rem; border-top: 1px solid var(--line); padding-block: 1.5rem 2.5rem; margin-top: 1rem; color: var(--muted); font-size: .875rem; }
+    @media (max-width: 760px) {
+      .page { width: min(100% - 2rem, 68rem); }
+      .topbar { align-items: flex-start; flex-direction: column; gap: .5rem; }
+      nav { gap: .3rem 1.25rem; }
+      .intro { padding-block: 2.75rem 2.5rem; }
+      .details { gap: .5rem 1.5rem; margin-top: 1.5rem; }
+      .section { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; padding-block: 2rem; }
+      .section-number { display: inline; margin-right: .65rem; }
+      .section-heading { display: flex; align-items: baseline; }
+      .schedule-header { display: block; }
+      .schedule-header p { margin-top: .5rem; }
+      table, tbody { display: block; }
+      caption { display: block; }
+      thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+      tbody tr { display: grid; grid-template-columns: 5.25rem minmax(0, 1fr); border-top: 1px solid var(--line); padding-block: 1rem; gap: .6rem .75rem; }
+      tbody tr:last-child { border-bottom: 1px solid var(--line); }
+      tbody th, tbody td { display: block; padding: 0; border: 0; min-width: 0; }
+      tbody th { grid-column: 1; font-weight: 600; color: var(--ink); }
+      tbody th::before { content: "Week "; }
+      td.date { grid-column: 2; }
+      td.reading { grid-column: 1 / -1; }
+      td.presenter { grid-column: 1 / -1; }
+      .presenter::before { content: "Presenter: "; color: var(--ink); }
+      .paper { overflow-wrap: anywhere; }
+    }
+    @media print {
+      .page { width: 100%; }
+      nav, .skip-link, footer a { display: none; }
+      .intro { padding-block: 1.5rem; }
+      h1 { font-size: 2.5rem; }
+      .section { padding-block: 1.5rem; }
+      .schedule-header, h2, h3 { break-after: avoid; }
+      tr, .instructor, .guidelines li { break-inside: avoid; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="topbar">
+      <span class="wordmark">LLM POST-TRAINING</span>
+      <nav aria-label="Main navigation">
+        <a href="#description">Description</a>
+        <a href="#instructors">Instructors</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#instructions">Instructions</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="intro">
+        <p class="eyebrow">Master’s research seminar</p>
+        <h1>Selected Topics in LLM Post-training</h1>
+        <p class="subtitle">From instruction tuning and human feedback to reasoning and inference-time scaling.</p>
+        <!-- EDIT: Add the semester, meeting time, and room below. -->
+        <dl class="details" aria-label="Seminar details">
+          <div><dt>Term</dt><dd>To be announced</dd></div>
+          <div><dt>Time &amp; place</dt><dd>To be announced</dd></div>
+        </dl>
+      </div>
+
+      <section class="section" id="description" aria-labelledby="description-heading">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">01</span>
+          <h2 id="description-heading">Seminar description</h2>
+        </div>
+        <div class="section-body">
+          <!-- EDIT: Seminar description. -->
+          <p>Large Language Models undergo two training phases: pre-training, typically on large amounts of unlabeled text to teach LLMs to predict the next token, and post-training, to make LLMs more useful, reliable, and aligned with human intent.</p>
+          <p>This seminar is dedicated to discussing post-training methods that enable LLMs to follow instructions, gain reasoning capabilities, align with human intent, or all of the above. We will cover seminal work as well as recent advancements on post-training methods.</p>
+          <p>Students will be expected to read, present, and critically discuss research papers throughout the semester. Through presentations and in-depth discussions, participants will develop a strong understanding of the principles, challenges, and latest advances in post-training methods for LLMs.</p>
+        </div>
+      </section>
+
+      <section class="section" id="instructors" aria-labelledby="instructors-heading">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">02</span>
+          <h2 id="instructors-heading">Instructors</h2>
+        </div>
+        <div class="section-body instructors">
+          <!-- EDIT: Each instructor has an optional photo and a short biography.
+               To add a photo, replace the initials span with the matching commented img tag
+               and upload that image to the images/ folder. Keep the relative image paths.
+               Email example: <a href="mailto:name@university.edu">name@university.edu</a> -->
+          <article class="instructor" aria-labelledby="zena-name">
+            <div class="instructor-photo">
+              <span aria-hidden="true">ZA</span>
+              <!-- <img src="images/zena-al-khalili.jpg" alt="Zena Al Khalili" width="160" height="160" loading="lazy"> -->
+            </div>
+            <div><h3 id="zena-name">Zena Al Khalili</h3><p>Short biography to be added.</p></div>
+          </article>
+          <article class="instructor" aria-labelledby="abhilasha-name">
+            <div class="instructor-photo">
+              <span aria-hidden="true">AR</span>
+              <!-- <img src="images/abhilasha-ravichander.jpg" alt="Dr. Abhilasha Ravichander" width="160" height="160" loading="lazy"> -->
+            </div>
+            <div><h3 id="abhilasha-name">Dr. Abhilasha Ravichander</h3><p>Short biography to be added.</p></div>
+          </article>
+          <article class="instructor" aria-labelledby="krishna-name">
+            <div class="instructor-photo">
+              <span aria-hidden="true">KG</span>
+              <!-- <img src="images/krishna-gummadi.jpg" alt="Dr. Krishna Gummadi" width="160" height="160" loading="lazy"> -->
+            </div>
+            <div><h3 id="krishna-name">Dr. Krishna Gummadi</h3><p>Short biography to be added.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section schedule-section" id="schedule" aria-labelledby="schedule-heading">
+        <div class="schedule-header">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">03</span>
+            <h2 id="schedule-heading">Schedule &amp; readings</h2>
+          </div>
+          <p>Proposed reading sequence</p>
+        </div>
+        <table aria-describedby="schedule-caption">
+          <caption id="schedule-caption">Dates and student presenters will be announced. The reading list is provisional.</caption>
+          <thead>
+            <tr><th scope="col">Week</th><th scope="col">Date</th><th scope="col">Paper / technical report</th><th scope="col">Student presenter</th></tr>
+          </thead>
+          <tbody>
+            <!-- EDIT: One <tr> block per session. Duplicate or remove a block to change the schedule.
+                 Replace date text with e.g. <time datetime="2026-10-12">12 Oct 2026</time>.
+                 Replace "Unassigned" with the student presenter's name. -->
+            <tr>
+              <th scope="row">01</th>
+              <td class="date pending">To be announced</td>
+              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a><span class="topic">GPT-3 · Prompting and in-context learning · 2020</span></td>
+              <td class="presenter pending">Unassigned</td>
+            </tr>
+            <tr>
+              <th scope="row">02</th>
+              <td class="date pending">To be announced</td>
+              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2203.02155">Training language models to follow instructions with human feedback</a><span class="topic">InstructGPT · Supervised fine-tuning and RLHF · 2022</span></td>
+              <td class="presenter pending">Unassigned</td>
+            </tr>
+            <tr>
+              <th scope="row">03</th>
+              <td class="date pending">To be announced</td>
+              <td class="reading"><a class="paper" href="https://arxiv.org/abs/1707.06347">Proximal Policy Optimization Algorithms</a><span class="topic">PPO · Policy optimization and value estimation · 2017</span></td>
+              <td class="presenter pending">Unassigned</td>
+            </tr>
+            <tr>
+              <th scope="row">04</th>
+              <td class="date pending">To be announced</td>
+              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a><span class="topic">DPO · Learning from preferences · 2023</span></td>
+              <td class="presenter pending">Unassigned</td>
+            </tr>
+            <tr>
+              <th scope="row">05</th>
+              <td class="date pending">To be announced</td>
+              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2402.03300">DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models</a><span class="topic">GRPO · Mathematical reasoning · 2024</span></td>
+              <td class="presenter pending">Unassigned</td>
+            </tr>
+            <tr>
+              <th scope="row">06</th>
+              <td class="date pending">To be announced</td>
+              <td class="reading"><a class="paper" href="https://openai.com/index/learning-to-reason-with-llms/">Learning to reason with LLMs</a><span class="topic">OpenAI o1 · Research announcement · Inference-time scaling · 2024</span></td>
+              <td class="presenter pending">Unassigned</td>
+            </tr>
+            <tr>
+              <th scope="row">07</th>
+              <td class="date pending">To be announced</td>
+              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2501.12948">DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</a><span class="topic">RLVR · Reinforcement learning for reasoning · 2025</span></td>
+              <td class="presenter pending">Unassigned</td>
+            </tr>
+            <tr>
+              <th scope="row">08</th>
+              <td class="date pending">To be announced</td>
+              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2210.10760">Scaling Laws for Reward Model Overoptimization</a><span class="topic">Analysis · Proxy rewards and overoptimization · 2022</span></td>
+              <td class="presenter pending">Unassigned</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section" id="instructions" aria-labelledby="instructions-heading">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">04</span>
+          <h2 id="instructions-heading">Participant instructions</h2>
+        </div>
+        <div class="section-body">
+          <!-- EDIT: Confirm or replace these suggested instructions before the seminar begins. -->
+          <p class="guidance-note">Draft guidance. Presentation length, submission deadlines, and assessment details will be confirmed by the instructors.</p>
+          <ol class="guidelines">
+            <li><strong>Before each session.</strong> Read the assigned paper and prepare at least one question about its assumptions, method, results, or limitations.</li>
+            <li><strong>Preparing your presentation.</strong> Explain the research question and relevant background, walk through the core method, and discuss the key experiments. Define the notation you use and distinguish the authors’ claims from your own interpretation.</li>
+            <li><strong>Leading the discussion.</strong> Identify strengths, limitations, and open questions. Relate the paper to earlier sessions and prepare questions that invite the group to assess the evidence.</li>
+            <li><strong>Sharing materials.</strong> Cite the sources of figures, equations, and borrowed material. Share your slides and any supplementary resources according to the instructors’ submission instructions.</li>
+            <li><strong>Participating.</strong> Contribute to the discussion, give constructive feedback, and let the instructors know as early as possible if you need to change your presentation date.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>Selected Topics in LLM Post-training</span><a href="#top">Back to top</a></footer>
+  </div>
+</body>
+</html>
