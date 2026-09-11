@@ -7,7 +7,7 @@
   <title>Selected Topics in LLM Post-training</title>
   <meta name="description" content="Selected Topics in LLM Post-training: a research seminar on instruction following, reasoning, and alignment with human intent. Instructors, readings, presentation schedule, and participant instructions.">
   <meta name="theme-color" content="#172c47">
-  <script type="text/javascript" nonce="76681a858d134421ad5436bee75" src="//local.adguard.org?ts=1789129462742&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000ea608243aac31525796a12bf%26fn%3Dindex.html%26cd%3Dattachment%26ts%3D496982%26p%3Dfs%26cid%3D1%26sig%3Df8e78677b3db7cc4c913c474df83c2359bd895a887a4383f764d08ec86e0a01b%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-dnt"></script><script type="text/javascript" nonce="76681a858d134421ad5436bee75" src="//local.adguard.org?ts=1789129462742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23172c47'/%3E%3Cpath d='M7 8h7c2 0 2 2 2 2s0-2 2-2h7v16h-7c-2 0-2 2-2 2s0-2-2-2H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M16 10v14' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <script type="text/javascript" nonce="76681a858d134421ad5436bee75" src="//local.adguard.org?ts=1789129462742&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_0000000096f4821087dc65e665d72239%26fn%3Dindex%25281%2529.html%26cd%3Dattachment%26ts%3D496982%26p%3Dfs%26cid%3D1%26sig%3D047dd60fd76f6dca6784f378e9541efe09d24f1221c82f72692af891605d4263%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-dnt"></script><script type="text/javascript" nonce="76681a858d134421ad5436bee75" src="//local.adguard.org?ts=1789129462742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23172c47'/%3E%3Cpath d='M7 8h7c2 0 2 2 2 2s0-2 2-2h7v16h-7c-2 0-2 2-2 2s0-2-2-2H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M16 10v14' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
   <style>
     :root {
       color-scheme: light;
@@ -75,14 +75,7 @@
     thead th:last-child { width: 11rem; }
     tbody th { font-size: .875rem; font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
     .paper { display: block; font-weight: 600; line-height: 1.5; }
-    .paper + .paper { margin-top: .7rem; }
-    .topic { display: block; margin-top: .35rem; font-size: .875rem; color: var(--muted); }
     .pending { color: var(--muted); font-size: .875rem; }
-    .guidance-note { color: var(--muted); font-size: .875rem; }
-    .guidelines { margin: 1.25rem 0 0; padding-left: 1.2rem; }
-    .guidelines li { padding-left: .35rem; margin-bottom: 1rem; }
-    .guidelines li:last-child { margin-bottom: 0; }
-    .guidelines strong { color: var(--ink); font-weight: 600; }
     footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.5rem; border-top: 1px solid var(--line); padding-block: 1.5rem 2.5rem; margin-top: 1rem; color: var(--muted); font-size: .875rem; }
     @media (max-width: 760px) {
       .page { width: min(100% - 2rem, 68rem); }
@@ -116,7 +109,7 @@
       h1 { font-size: 2.5rem; }
       .section { padding-block: 1.5rem; }
       .schedule-header, h2, h3 { break-after: avoid; }
-      tr, .instructor, .guidelines li { break-inside: avoid; }
+      tr, .instructor { break-inside: avoid; }
       a { color: inherit; }
     }
   </style>
@@ -199,10 +192,9 @@
             <span class="section-number" aria-hidden="true">03</span>
             <h2 id="schedule-heading">Schedule &amp; readings</h2>
           </div>
-          <p>Proposed reading sequence</p>
         </div>
         <table aria-describedby="schedule-caption">
-          <caption id="schedule-caption">Dates and student presenters will be announced. The reading list is provisional.</caption>
+          <caption id="schedule-caption">Paper titles, dates, and student presenters will be added here.</caption>
           <thead>
             <tr><th scope="col">Week</th><th scope="col">Date</th><th scope="col">Paper / technical report</th><th scope="col">Student presenter</th></tr>
           </thead>
@@ -213,49 +205,49 @@
             <tr>
               <th scope="row">01</th>
               <td class="date pending">To be announced</td>
-              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a><span class="topic">GPT-3 · Prompting and in-context learning · 2020</span></td>
+              <td class="reading"><span class="paper muted">Paper to be announced</span></td>
               <td class="presenter pending">Unassigned</td>
             </tr>
             <tr>
               <th scope="row">02</th>
               <td class="date pending">To be announced</td>
-              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2203.02155">Training language models to follow instructions with human feedback</a><span class="topic">InstructGPT · Supervised fine-tuning and RLHF · 2022</span></td>
+              <td class="reading"><span class="paper muted">Paper to be announced</span></td>
               <td class="presenter pending">Unassigned</td>
             </tr>
             <tr>
               <th scope="row">03</th>
               <td class="date pending">To be announced</td>
-              <td class="reading"><a class="paper" href="https://arxiv.org/abs/1707.06347">Proximal Policy Optimization Algorithms</a><span class="topic">PPO · Policy optimization and value estimation · 2017</span></td>
+              <td class="reading"><span class="paper muted">Paper to be announced</span></td>
               <td class="presenter pending">Unassigned</td>
             </tr>
             <tr>
               <th scope="row">04</th>
               <td class="date pending">To be announced</td>
-              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a><span class="topic">DPO · Learning from preferences · 2023</span></td>
+              <td class="reading"><span class="paper muted">Paper to be announced</span></td>
               <td class="presenter pending">Unassigned</td>
             </tr>
             <tr>
               <th scope="row">05</th>
               <td class="date pending">To be announced</td>
-              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2402.03300">DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models</a><span class="topic">GRPO · Mathematical reasoning · 2024</span></td>
+              <td class="reading"><span class="paper muted">Paper to be announced</span></td>
               <td class="presenter pending">Unassigned</td>
             </tr>
             <tr>
               <th scope="row">06</th>
               <td class="date pending">To be announced</td>
-              <td class="reading"><a class="paper" href="https://openai.com/index/learning-to-reason-with-llms/">Learning to reason with LLMs</a><span class="topic">OpenAI o1 · Research announcement · Inference-time scaling · 2024</span></td>
+              <td class="reading"><span class="paper muted">Paper to be announced</span></td>
               <td class="presenter pending">Unassigned</td>
             </tr>
             <tr>
               <th scope="row">07</th>
               <td class="date pending">To be announced</td>
-              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2501.12948">DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</a><span class="topic">RLVR · Reinforcement learning for reasoning · 2025</span></td>
+              <td class="reading"><span class="paper muted">Paper to be announced</span></td>
               <td class="presenter pending">Unassigned</td>
             </tr>
             <tr>
               <th scope="row">08</th>
               <td class="date pending">To be announced</td>
-              <td class="reading"><a class="paper" href="https://arxiv.org/abs/2210.10760">Scaling Laws for Reward Model Overoptimization</a><span class="topic">Analysis · Proxy rewards and overoptimization · 2022</span></td>
+              <td class="reading"><span class="paper muted">Paper to be announced</span></td>
               <td class="presenter pending">Unassigned</td>
             </tr>
           </tbody>
@@ -268,15 +260,8 @@
           <h2 id="instructions-heading">Participant instructions</h2>
         </div>
         <div class="section-body">
-          <!-- EDIT: Confirm or replace these suggested instructions before the seminar begins. -->
-          <p class="guidance-note">Draft guidance. Presentation length, submission deadlines, and assessment details will be confirmed by the instructors.</p>
-          <ol class="guidelines">
-            <li><strong>Before each session.</strong> Read the assigned paper and prepare at least one question about its assumptions, method, results, or limitations.</li>
-            <li><strong>Preparing your presentation.</strong> Explain the research question and relevant background, walk through the core method, and discuss the key experiments. Define the notation you use and distinguish the authors’ claims from your own interpretation.</li>
-            <li><strong>Leading the discussion.</strong> Identify strengths, limitations, and open questions. Relate the paper to earlier sessions and prepare questions that invite the group to assess the evidence.</li>
-            <li><strong>Sharing materials.</strong> Cite the sources of figures, equations, and borrowed material. Share your slides and any supplementary resources according to the instructors’ submission instructions.</li>
-            <li><strong>Participating.</strong> Contribute to the discussion, give constructive feedback, and let the instructors know as early as possible if you need to change your presentation date.</li>
-          </ol>
+          <!-- EDIT: Add participant instructions here when they are ready. -->
+          <p class="muted">Seminar instructions will be added here.</p>
         </div>
       </section>
     </main>

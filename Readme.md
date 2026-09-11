@@ -16,28 +16,10 @@ Open `index.html` in a web browser. The page works directly from your computer, 
 
 The title, seminar description, and instructor names were supplied by the seminar organizer. The reading sequence and participant guidance are provisional. Dates, student presenters, instructor photographs, and biographies have not been supplied. The reading sequence is pedagogical rather than a strict publication timeline. The o1 reading is an official research announcement, not a conventional research paper.
 
-## Publish on GitHub Pages
-
-1. Open [Zena-AlKhalili/Post_training_Seminar](https://github.com/Zena-AlKhalili/Post_training_Seminar) while signed into an account with write access to that repository.
-2. Upload `index.html` and `.nojekyll` to the root of its `main` branch. You may also include this `README.md`. Upload the extracted files, not the ZIP archive or its enclosing folder. `index.html` should appear directly in the repository’s top-level file list.
-3. Open the repository’s **Settings → Pages**.
-4. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-5. Select **main** and **/(root)**, then click **Save**.
-6. Wait for GitHub’s deployment to finish. The Pages settings screen will show the published website address.
-
-Once Pages is enabled and its first deployment succeeds, the website address will be:
-
-```text
-https://zena-alkhalili.github.io/Post_training_Seminar/
-```
-
-If the repository already contains another website, preserve it and use a separate repository for this seminar. If you deliberately publish from `/docs`, put both website files inside `/docs` and select that folder in Pages settings.
-
-GitHub documentation: [Configure a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) and [GitHub Pages site types and addresses](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
 
 ## Update the content
 
-Edit `index.html` locally, or open it in GitHub and choose the pencil icon. Search for `EDIT:` to find the main editing points. Save and commit the changes; GitHub Pages publishes updates from the selected branch and folder.
+Edit `index.html`. Save and commit the changes; GitHub Pages publishes updates from the selected branch and folder.
 
 | Content | What to edit in `index.html` |
 | --- | --- |
